@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindCars.shop - Your Trusted Car Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                        <path d="M8 16C8 16 10 12 16 12C22 12 24 16 24 16V20C24 20 22 22 16 22C10 22 8 20 8 20V16Z" stroke="white" stroke-width="2"/>
+                        <circle cx="12" cy="20" r="2" fill="white"/>
+                        <circle cx="20" cy="20" r="2" fill="white"/>
+                    </svg>
+                    <span>FindCars.shop</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#inventory" class="nav-link">Inventory</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="btn-primary" onclick="scrollToSection('contact')">List Your Car</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMobileMenu()">✕</button>
+        <ul class="mobile-nav-list">
+            <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+            <li><a href="#inventory" onclick="scrollToSection('inventory')">Inventory</a></li>
+            <li><a href="#how-it-works" onclick="scrollToSection('how-it-works')">How It Works</a></li>
+            <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+        <button class="btn-primary" onclick="scrollToSection('contact')">List Your Car</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">🚗 Trusted by 10,000+ Car Buyers & Sellers</div>
+                    <h1>Find Your Perfect Car or Sell With Confidence</h1>
+                    <p>The most trusted online car marketplace in the US. Buy verified vehicles or list your car for free and reach thousands of buyers.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large" onclick="scrollToSection('inventory')">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M13 13L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Browse Cars
+                        </button>
+                        <button class="btn-secondary btn-large" onclick="scrollToSection('contact')">Sell Your Car</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Cars Available</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10k+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4.9★</div>
+                            <div class="stat-label">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop" alt="Premium car showcase">
+                        <div class="image-badge">✓ Verified Sellers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M16 10V16L20 20" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Quick & Easy Process</h3>
+                    <p>List or find your car in minutes with our streamlined platform</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L18.5 12H28.5L20.5 18L23 28L16 22L9 28L11.5 18L3.5 12H13.5L16 2Z" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Verified Listings</h3>
+                    <p>All vehicles are checked and verified for your peace of mind</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="10" width="24" height="16" rx="2" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M4 14H28" stroke="#2563eb" stroke-width="2"/>
+                            <circle cx="16" cy="20" r="2" fill="#2563eb"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>Safe and protected payment methods for all deals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="10" r="6" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M6 26C6 21 10 18 16 18C22 18 26 21 26 26" stroke="#2563eb" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our team is here to help you every step of the way</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="inventory">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Vehicles</h2>
+                <p>Handpicked cars from verified sellers across the US</p>
+            </div>
+
+            <div class="car-grid" id="carGrid">
+                <!-- Car cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple steps to buy or sell your car</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('buying')">Buying a Car</button>
+                <button class="tab-btn" onclick="switchTab('selling')">Selling a Car</button>
+            </div>
+            <div class="tab-content" id="buying-tab">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Browse Inventory</h3>
+                        <p>Search through hundreds of verified vehicles with detailed photos and specifications</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Contact Seller</h3>
+                        <p>Connect directly with verified sellers through our secure messaging system</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Inspect & Test Drive</h3>
+                        <p>Schedule an inspection and test drive to ensure the car meets your expectations</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Complete Purchase</h3>
+                        <p>Finalize the deal with our secure payment system and drive away happy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="selling-tab">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Create Listing</h3>
+                        <p>List your car for free with photos and detailed information</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Get Verified</h3>
+                        <p>Our team verifies your listing to build trust with potential buyers</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Receive Offers</h3>
+                        <p>Connect with serious buyers and negotiate the best price</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Close the Deal</h3>
+                        <p>Complete the sale securely and transfer ownership with our guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=800&fit=crop" alt="About FindCars.shop">
+                </div>
+                <div class="about-text">
+                    <div class="badge">About Us</div>
+                    <h2>Your Trusted Partner in Car Trading</h2>
+                    <p>Founded in 2020, FindCars.shop has revolutionized the way Americans buy and sell cars online. We've built a platform that prioritizes trust, transparency, and convenience.</p>
+                    <div class="about-points">
+                        <div class="point">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#2563eb" fill-opacity="0.1"/>
+                                <path d="M7 12L10 15L17 8" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h4>10,000+ Happy Customers</h4>
+                                <p>Trusted by thousands nationwide</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#2563eb" fill-opacity="0.1"/>
+                                <path d="M7 12L10 15L17 8" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h4>Verified Listings Only</h4>
+                                <p>Every car is checked and approved</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="#2563eb" fill-opacity="0.1"/>
+                                <path d="M7 12L10 15L17 8" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <div>
+                                <h4>24/7 Customer Support</h4>
+                                <p>We're always here to help you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real people</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Found my dream car in just 2 days! The process was incredibly smooth and the seller was verified. Highly recommend FindCars.shop!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <div class="author-name">Jessica Davis</div>
+                            <div class="author-location">San Francisco, CA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Sold my car within a week at a great price. The platform made it so easy to list and connect with serious buyers."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div>
+                            <div class="author-name">Michael Thompson</div>
+                            <div class="author-location">Austin, TX</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Best car marketplace I've used. Great selection, verified sellers, and excellent customer support. Will definitely use again!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div>
+                            <div class="author-name">Sarah Rodriguez</div>
+                            <div class="author-location">Miami, FL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions or ready to list your car? We're here to help!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M4 9L12 13L20 9" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="method-label">Email</div>
+                                <div class="method-value">findcars42.shop</div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 4H9L11 9L8.5 10.5C9.57096 12.6715 11.3285 14.429 13.5 15.5L15 13L20 15V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21C13.4913 20.763 9.26295 18.9762 6.05025 15.9497C3.02375 12.737 1.23697 9.50872 1 5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H5Z" stroke="#2563eb" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="method-label">Phone</div>
+                                <div class="method-value">+1 803 573-5466</div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 21C16.4183 21 20 17.4183 20 13C20 8.58172 16.4183 5 12 5C7.58172 5 4 8.58172 4 13C4 17.4183 7.58172 21 12 21Z" stroke="#2563eb" stroke-width="2"/>
+                                    <path d="M12 8V13L15 15" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="method-label">Hours</div>
+                                <div class="method-value">Mon-Fri: 9AM-6PM EST</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="buying">I want to buy a car</option>
+                            <option value="selling">I want to sell my car</option>
+                            <option value="support">General support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">
+                        Send Message
+                    </button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                            <path d="M8 16C8 16 10 12 16 12C22 12 24 16 24 16V20C24 20 22 22 16 22C10 22 8 20 8 20V16Z" stroke="white" stroke-width="2"/>
+                            <circle cx="12" cy="20" r="2" fill="white"/>
+                            <circle cx="20" cy="20" r="2" fill="white"/>
+                        </svg>
+                        <span>FindCars.shop</span>
+                    </div>
+                    <p>Your trusted partner for buying and selling cars online. Making car trading simple, secure, and transparent since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+                        <li><a href="#inventory" onclick="scrollToSection('inventory')">Browse Cars</a></li>
+                        <li><a href="#how-it-works" onclick="scrollToSection('how-it-works')">How It Works</a></li>
+                        <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact" onclick="scrollToSection('contact')">Contact Us</a></li>
+                        <li><a href="#" onclick="alert('Feature coming soon!')">FAQs</a></li>
+                        <li><a href="#" onclick="alert('Feature coming soon!')">Buyer's Guide</a></li>
+                        <li><a href="#" onclick="alert('Feature coming soon!')">Seller's Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Get the latest cars and deals delivered to your inbox</p>
+                    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FindCars.shop. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" onclick="alert('Feature coming soon!')">Privacy Policy</a>
+                    <a href="#" onclick="alert('Feature coming soon!')">Terms of Service</a>
+                    <a href="#" onclick="alert('Feature coming soon!')">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
